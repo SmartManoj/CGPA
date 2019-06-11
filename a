@@ -1,0 +1,36 @@
+from tkinter import *
+from bs4 import BeautifulSoup
+import requests
+ls=['-ODD_2014','-EVEN_2014','-ODD_2015','-EVEN_2015','-ODD_2016','-EVEN_2016','-ODD_2017','-EVEN_2017']
+def f():
+	regno=txt.get()
+	
+	try:
+		res.configure(text='CGPA :{}'.format(round(tot_points/tot_credits,2)))
+	except Exception as e:
+		print(e)
+def f2():
+	v1.set('')
+	res.configure(text='')
+def f3():
+	v1.set('')
+	res.configure(text='')	
+window = Tk()
+global v1
+window.title("CGPA")
+window.geometry('400x250')
+lbl = Label(window,text="Register No")
+lbl.grid(column=0, row=0)
+v1=StringVar()
+v1.set("18csr094")
+txt = Entry(window,width=20,textvariable=v1)
+txt.grid(column=1, row=0)
+btn = Button(window, text="Submit",width=5,command=f)
+btn.grid(column=0,row=1)
+btn2 = Button(window, text="Reset",width=5,command=f2)
+btn2.grid(column=1,row=1)
+btn2 = Button(window, text="About",width=5,command=f2)
+btn2.grid(column=1,row=2)
+res=Label(window)
+res.grid(row=2,column=2)
+window.mainloop()
