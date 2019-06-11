@@ -1,14 +1,14 @@
+import traceback,requests
+from threading import Thread
 def exception(e):pass
 helpl=''
 karts=[]
-import traceback,requests
 from bs4 import *
 pre=lambda x,y:x
 rn=lambda x:x
 alink=lambda x,y:x
-from threading import Thread
 headers={"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120"}
-from config import *
+from .config import *
 out=open('z','a')
 class Thread2(Thread):
 	def __init__(self, target=None,args=(), kwargs={}):
