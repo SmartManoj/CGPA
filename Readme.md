@@ -1,1 +1,4 @@
-pyinstaller --hidden-import tkinter -y  "D:/Gits/CGPA_KEC_KPC/main.py" & zmsg &
+For KEC KPC Vellalar
+
+
+pyinstaller --hidden-import tkinter -y  "D:/Gits/CGPA/main.py" & zmsg &
